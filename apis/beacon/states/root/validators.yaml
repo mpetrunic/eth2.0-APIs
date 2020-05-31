@@ -20,7 +20,7 @@ get:
         uniqueItems: true
         items:
           type: string
-          example: 1
+          example: "1"
     - name: pubkey
       description: "Validator public key hex encoded"
       in: query
