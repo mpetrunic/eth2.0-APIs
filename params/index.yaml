@@ -4,6 +4,4 @@ StateId:
   required: true
   schema:
     type: string
-  description: |
-    State identifier.
-    Can be one of: "head" (canonical head in node's view), "genesis", "finalized", "justified", \<slot\>, \<stateRoot\>.
+    enum: ["genesis", "head", "finalized", "justified"]

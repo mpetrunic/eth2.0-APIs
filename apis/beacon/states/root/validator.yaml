@@ -1,0 +1,33 @@
+get:
+  operationId: "getStateByRootValidator"
+  summary: "Get validator from state by id"
+  description: "Returns validator specified by state and id or public key along with status and balance."
+  tags:
+    - Beacon
+  parameters:
+    - name: root
+      in: path
+      required: true
+      schema:
+        $ref: '../../../../beacon-node-oapi.yaml#/components/schemas/Root'
+    - name: validator_id
+      description: "Either public key or validator index"
+      in: path
+      required: true
+      schema:
+        type: string
+
+  responses:
+    "200":
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '../../../../beacon-node-oapi.yaml#/components/schemas/ValidatorResponse'
+
+    "404":
+      description: "Validator doesn't exist."
+
+    "500":
+      $ref: '../../../../beacon-node-oapi.yaml#/components/responses/InternalError'
+

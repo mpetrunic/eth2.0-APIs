@@ -34,16 +34,38 @@ paths:
     $ref: "./apis/beacon/genesis.yaml"
   /v1/beacon/states/{state_id}/root:
     $ref: "./apis/beacon/states/root.yaml"
+  /v1/beacon/states/slots/{slot}/root:
+    $ref: "./apis/beacon/states/slot/root.yaml"
   /v1/beacon/states/{state_id}/fork:
     $ref: "./apis/beacon/states/fork.yaml"
+  /v1/beacon/states/slots/{slot}/fork:
+    $ref: "./apis/beacon/states/slot/fork.yaml"
+  /v1/beacon/states/state_roots/{root}/fork:
+    $ref: "./apis/beacon/states/root/fork.yaml"
   /v1/beacon/states/{state_id}/finality_checkpoints:
     $ref: "./apis/beacon/states/finality_checkpoints.yaml"
+  /v1/beacon/states/slots/{slot}/finality_checkpoints:
+    $ref: "./apis/beacon/states/slot/finality_checkpoints.yaml"
+  /v1/beacon/states/state_root/{root}/finality_checkpoints:
+    $ref: "./apis/beacon/states/root/finality_checkpoints.yaml"
   /v1/beacon/states/{state_id}/validators:
     $ref: "./apis/beacon/states/validators.yaml"
+  /v1/beacon/states/slots/{slot}/validators:
+    $ref: "./apis/beacon/states/slot/validators.yaml"
+  /v1/beacon/states/state_root/{root}/validators:
+    $ref: "./apis/beacon/states/root/validators.yaml"
   /v1/beacon/states/{state_id}/validators/{validator_id}:
     $ref: "./apis/beacon/states/validator.yaml"
+  /v1/beacon/states/slots/{slot}/validators/{validator_id}:
+    $ref: "./apis/beacon/states/slot/validator.yaml"
+  /v1/beacon/states/state_root/{root}/validators/{validator_id}:
+    $ref: "./apis/beacon/states/root/validator.yaml"
   /v1/beacon/states/{state_id}/committees/{epoch}:
     $ref: "./apis/beacon/states/committee.yaml"
+  /v1/beacon/states/slots/{slot}/committees/{epoch}:
+    $ref: "./apis/beacon/states/slot/committee.yaml"
+  /v1/beacon/states/state_root/{root}/committees/{epoch}:
+    $ref: "./apis/beacon/states/root/committee.yaml"
 
   /v1/node/identity:
     $ref: "./apis/node/identity.yaml"
