@@ -7,8 +7,8 @@ get:
   parameters:
     - name: state_id
       $ref: '../../../beacon-node-oapi.yaml#/components/parameters/StateId'
-    - name: id
-      description: "Either public key or validator index"
+    - name: index
+      description: "Validator index"
       in: query
       required: false
       schema:
@@ -16,8 +16,18 @@ get:
         maxItems: 30
         uniqueItems: true
         items:
-          description: "Hex encoded public key or validator index"
           type: string
+          example: 1
+    - name: pubkey
+      description: "Validator public key hex encoded"
+      in: query
+      required: false
+      schema:
+        type: array
+        maxItems: 30
+        uniqueItems: true
+        items:
+          $ref: "../../../beacon-node-oapi.yaml#/components/schemas/PublicKey"
     - name: status
       description: "[Validator status specification](https://hackmd.io/ofFJ5gOmQpu1jjHilHbdQQ)"
       in: query

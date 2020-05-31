@@ -54,11 +54,11 @@ paths:
     $ref: "./apis/beacon/states/slot/validators.yaml"
   /v1/beacon/states/state_root/{root}/validators:
     $ref: "./apis/beacon/states/root/validators.yaml"
-  /v1/beacon/states/{state_id}/validators/{validator_id}:
+  /v1/beacon/states/{state_id}/validators/{pubkey}:
     $ref: "./apis/beacon/states/validator.yaml"
-  /v1/beacon/states/slots/{slot}/validators/{validator_id}:
+  /v1/beacon/states/slots/{slot}/validators/{pubkey}:
     $ref: "./apis/beacon/states/slot/validator.yaml"
-  /v1/beacon/states/state_root/{root}/validators/{validator_id}:
+  /v1/beacon/states/state_root/{root}/validators/{pubkey}:
     $ref: "./apis/beacon/states/root/validator.yaml"
   /v1/beacon/states/{state_id}/committees/{epoch}:
     $ref: "./apis/beacon/states/committee.yaml"

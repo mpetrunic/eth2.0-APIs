@@ -8,8 +8,8 @@ get:
   parameters:
     - name: state_id
       $ref: '../../../beacon-node-oapi.yaml#/components/parameters/StateId'
-    - name: validator_id
-      description: "Either public key or validator index"
+    - name: pubkey
+      description: "Validator public key hex encoded"
       in: path
       required: true
       schema:

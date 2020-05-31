@@ -10,8 +10,8 @@ get:
       required: true
       schema:
         $ref: '../../../../beacon-node-oapi.yaml#/components/schemas/Root'
-    - name: validator_id
-      description: "Either public key or validator index"
+    - name: pubkey
+      description: "Validator public key hex encoded"
       in: path
       required: true
       schema:
